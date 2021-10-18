@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The National Gallery</title>
+
+    <meta itemprop="name" content="Generative Art">
+    <meta itemprop="description" content="Generative Art Experiments Using p5.js">
+    <meta itemprop="image" content="static/opengraph.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Generative Art">
+    <meta name="twitter:description" content="Generative Art Experiments Using P5.js">
+    <meta name="twitter:image" content="static/opengraph.png">
+
+    <meta property="og:site_name" content="Generative Art">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.everythingmeanseverything.com">
+    <meta property="og:title" content="Generative Art">
+    <meta property="og:description" content="Generative Art Experiments Using P5.js">
+    <meta property="og:image" content="static/opengraph.png">
+
+    <link rel="shortcut icon" href="static/favicon-16x16.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/20abf99bcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cursor">
+      <div class="cursor__custom cursor__custom--outer">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+      <div class="cursor__custom cursor__custom--inner">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="loader__animation">
+        <span class="loader loader__text">"You'd better wait for me."</span>
+      </div>
+    </div>
+    <header></header>
+    <section class="main">
+      <h1 class="main__h1">
+        Everything Means Everything: <br />
+        Generative Art Project <br />
+        Inspired by The National
+      </h1>
+      <h3 class="main__h3">
+        This project is a result of my genuine love for The National, passion
+        for programming, and fascination with generative art.
+      </h3>
+    </section>
+    <div class="menu__area">
+      <canvas class="webgl">
+        <!-- <a href="https://www.instagram.com/p/Bebrny5FGBC"></a> -->
+      </canvas>
+      <nav class="menu">
+        <a href="#thentnl" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">The National</span>
+          </div>
+        </a>
+        <a href="#ssfdl" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">Sad Songs for Dirty Lovers</span>
+          </div>
+        </a>
+        <a href="#cherry" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">Cherry Tree</span>
+          </div>
+        </a>
+        <a href="#alligator" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">Alligator</span>
+          </div>
+        </a>
+        <a href="#boxer" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">Boxer</span>
+          </div>
+        </a>
+        <a href="#virginia" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">The Virginia EP</span>
+          </div>
+        </a>
+        <a href="#violet" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">High Violet</span>
+          </div>
+        </a>
+        <a href="#twfm" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">Trouble Will Find Me</span>
+          </div>
+        </a>
+        <a href="#swb" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">Sleep Well Beast</span>
+          </div>
+        </a>
+        <a href="#iaetf" class="menu__item menu__item--hover">
+          <div>
+            <span class="menu__item--list">I Am Easy to Find</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+    <div id="page-container">
+      <div id="content-wrap">
+        <section class="preface">
+          <h2 class="preface__h2">Preface</h2>
+          <p class="preface__p">
+            Generative art allows to create pieces of digital art according to
+            certain algorithms set up to a computer by an
+            artist/coder/programmer/etc. For me it is always about seeking
+            boundaries between familiar and peculiar, between control and chaos.
+          </p>
+          <p class="preface__p">
+            Generative art expresses a balance between human imagination and
+            computer capabilities. I believe in the idea that the code is a form
+            of art in itself as it represents program written by human, and thus
+            is creative.
+          </p>
+          <p class="preface__p">
+            I've been in love with The National for eight years now. It started
+            from ‘Trouble Will Find Me’ and ‘See of Love’ video in particular. I
+            was impressed and captivated by the band’s homage of the Sounds of
+            Mu's music video. Since then music of The National and their
+            collaborators and friends has a significant impact on me.
+          </p>
+          <p class="preface__p">
+            So, I decided to make generative arts for each album. Works reflect
+            my perception of each album in its entirety. The main purpose was to
+            depict my feelings in a moment of listening every album on repeat
+            and then visualise them with generative art.
+          </p>
+          <p class="preface__p">
+            Algorithms and patterns I used in code contain numbers related to
+            each album: number of tracks, release date, etc.. I used colors of
+            the albums' covers, in some cases I played with blend mode for
+            mixing the pixels. I also gave a name to each series of works from
+            the lyrics which are resonate with my perception.
+          </p>
+          <p class="preface__p">
+            Each set of works has some randomness in code, or even intentional
+            mistakes. Mistakes overturn and change the paradigm of strict
+            algorithms.
+          </p>
+          <h2 class="about__h2">About artworks</h2>
+          <p class="about__p">
+            Each piece is unique and can not be repeated. An artwork is an
+            autonomous entity with its own personality, its own set of rules and
+            its special way of life.
+          </p>
+          <p class="about__p">
+            The actual size of each artwork is between 1,000px and 5,000px.
+            However, the works have been reduced for easy viewing and
+            optimization of the page.
+          </p>
+        </section>
+        <section class="gallery">
+          <div id="thentnl">
+            <div class="gallery__grid slide-in from-left">
+            <div class="grid__text slide-in from-left">
+              <h3 class="gallery__h3">The National (2001)</h3>
+              <p class="gallery__album-title">
+                "Shallow frame and shaky sticks"
+              </p>
+            </div>
+            <div class="slider slide-in from-left">
+              <div class="slide">
+                <img
+                  loading="lazy"
+                  class="carousel__image"
+                  src="albums/thenational/the-national-1.png"
+                  alt="The National first album"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  loading="lazy"
+                  class="carousel__image"
+                  src="albums/thenational/the-national-2.png"
+                  alt="The National first album"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  loading="lazy"
+                  class="carousel__image"
+                  src="albums/thenational/the-national-3.png"
+                  alt="The National first album"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  loading="lazy"
+                  class="carousel__image"
+                  src="albums/thenational/the-national-4.png"
+                  alt="The National first album"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  loading="lazy"
+                  class="carousel__image"
+                  src="albums/thenational/the-national-5.png"
+                  alt="The National first album"
+                />
+              </div>
+              <button class="slider__btn slider__btn--left">&#8592;</button>
+              <button class="slider__btn slider__btn--right">&#8594;</button>
+              <div class="dots"></div>
+            </div>
+            </div>
+          </div>
+          <div id="ssfdl">
+            <div class="gallery__grid slide-in from-right">
+              <div class="slider slide-in from-right">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-1.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-2.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-3.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-4.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-5.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-6.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/ssfdl/ssfdl-7.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+              <div class="grid__text slide-in from-right">
+                <h3 class="gallery__h3">Sad Songs for Dirty Lovers (2003)</h3>
+                <p class="gallery__album-title">
+                  "Are those dreams inside your head?"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="cherry">
+            <div class="gallery__grid slide-in from-left">
+              <div class="grid__text slide-in from-left">
+                <h3 class="gallery__h3">Cherry Tree (2004)</h3>
+                <p class="gallery__album-title">"Sew it in my skin"</p>
+              </div>
+              <div class="slider slide-in from-left">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/cherrytree/cherry-1.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/cherrytree/cherry-2.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/cherrytree/cherry-3.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/cherrytree/cherry-4.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/cherrytree/cherry-5.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+            </div>
+          </div>
+          <div id="alligator">
+            <div class="gallery__grid slide-in from-right">
+              <div class="slider slide-in from-right">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/alligator/alligator-1.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/alligator/alligator-2.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/alligator/alligator-3.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/alligator/alligator-4.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/alligator/alligator-5.png"
+                    alt="Sad songs for dirty lovers"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+              <div class="grid__text slide-in from-right">
+                <h3 class="gallery__h3">Alligator (2005)</h3>
+                <p class="gallery__album-title">"I lost direction"</p>
+              </div>
+            </div>
+          </div>
+          <div id="boxer">
+            <div class="gallery__grid slide-in from-left">
+              <div class="grid__text slide-in from-left">
+                <h3 class="gallery__h3">Boxer (2007)</h3>
+                <p class="gallery__album-title">
+                  "Way out of sync from the beginning"
+                </p>
+              </div>
+              <div class="slider slide-in from-left">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-1.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-2.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-3.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-4.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-5.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-6.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/boxer/boxer-7.png"
+                    alt="The National Boxer"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+            </div>
+          </div>
+          <div id="virginia">
+            <div class="gallery__grid slide-in from-right">
+              <div class="slider slide-in from-right">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/virginia/virginia-1.png"
+                    alt="The National Virginia EP"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/virginia/virginia-2.png"
+                    alt="The National Virginia EP"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/virginia/virginia-3.png"
+                    alt="The National Virginia EP"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/virginia/virginia-4.png"
+                    alt="The National Virginia EP"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+              <div class="grid__text slide-in from-right">
+                <h3 class="gallery__h3">The Virginia EP (2008)</h3>
+                <p class="gallery__album-title">
+                  "It’s all right to see a ghost"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="violet">
+            <div class="gallery__grid slide-in from-left">
+              <div class="grid__text slide-in from-left">
+                <h3 class="gallery__h3">High Violet (2010)</h3>
+                <p class="gallery__album-title">"It should tear a kid apart"</p>
+              </div>
+              <div class="slider slide-in from-left">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/highviolet/violet-1.webp"
+                    alt="The National High Violet"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/highviolet/violet-2.webp"
+                    alt="The National High Violet"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/highviolet/violet-3.png"
+                    alt="The National High Violet"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/highviolet/violet-4.png"
+                    alt="The National High Violet"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/highviolet/violet-5.png"
+                    alt="The National High Violet"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/highviolet/violet-6.webp"
+                    alt="The National High Violet"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+            </div>
+          </div>
+          <div id="twfm">
+            <div class="gallery__grid slide-in from-right">
+              <div class="slider slide-in from-right">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/trouble/trouble-1.png"
+                    alt="The National Trouble Will Find Me"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/trouble/trouble-2.png"
+                    alt="The National Trouble Will Find Me"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/trouble/trouble-3.png"
+                    alt="The National Trouble Will Find Me"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/trouble/trouble-4.png"
+                    alt="The National Trouble Will Find Me"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/trouble/trouble-5.png"
+                    alt="The National Trouble Will Find Me"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+              <div class="grid__text slide-in from-right">
+                <h3 class="gallery__h3">Trouble Will Find Me (2013)</h3>
+                <p class="gallery__album-title">
+                  "I am invisible and weightless"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="swb">
+            <div class="gallery__grid slide-in from-left">
+              <div class="grid__text slide-in from-left">
+                <h3 class="gallery__h3">Sleep Well Beast (2017)</h3>
+                <p class="gallery__album-title">
+                  "A little of the collapsing space"
+                </p>
+              </div>
+              <div class="slider">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/sleepwellbeast/beast-1.png"
+                    alt="The National Sleep Well Beast"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/sleepwellbeast/beast-2.png"
+                    alt="The National Sleep Well Beast"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/sleepwellbeast/beast-3.png"
+                    alt="The National Sleep Well Beast"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/sleepwellbeast/beast-4.png"
+                    alt="The National Sleep Well Beast"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+            </div>
+          </div>
+          <div id="iaetf">
+            <div class="gallery__grid slide-in from-right">
+              <div class="slider slide-in from-right">
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/iaetf/iaetf-1.webp"
+                    alt="The National I am Easy to Find"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/iaetf/iaetf-2.png"
+                    alt="The National I am Easy to Find"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/iaetf/iaetf-3.png"
+                    alt="The National I am Easy to Find"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/iaetf/iaetf-4.webp"
+                    alt="The National I am Easy to Find"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/iaetf/iaetf-5.png"
+                    alt="The National I am Easy to Find"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    loading="lazy"
+                    class="carousel__image"
+                    src="albums/iaetf/iaetf-6.webp"
+                    alt="The National I am Easy to Find"
+                  />
+                </div>
+                <button class="slider__btn slider__btn--left">&#8592;</button>
+                <button class="slider__btn slider__btn--right">&#8594;</button>
+                <div class="dots"></div>
+              </div>
+              <div class="grid__text slide-in from-right">
+                <h3 class="gallery__h3">I Am Easy to Find (2019)</h3>
+                <p class="gallery__album-title">
+                  "I'm still waiting for you every night with ticker tape"
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <p class="footer__p">
+          Feel free to reach out. <br />
+          I'd love to chat about music, art, and web‑development! <br />
+          <a class="main__site" href="https://chmsv.com">&#187; My main site</a>
+        </p>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="mailto:mail@chmsv.com">
+              <i class="fas fa-envelope-square"></i>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a
+              class="social-list__link"
+              href="https://www.linkedin.com/in/💻anna-chemisova-85b2511b7/"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a
+              class="social-list__link"
+              href="https://www.facebook.com/anna.chemisova"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
