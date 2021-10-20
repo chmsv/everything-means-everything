@@ -29,7 +29,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   height: 100%;
 }
 
@@ -43,6 +42,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+
+html, body{
+  max-width: 100%;
   overflow-x: hidden;
 }
 
