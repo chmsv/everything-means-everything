@@ -445,7 +445,7 @@ a:hover {
 }
 
 .footer__p {
-  padding: 4rem 2rem 1rem 7rem;
+  padding: 4rem 2rem;
   flex: 50%;
 }
 
@@ -462,7 +462,7 @@ a:hover {
   display: flex;
   justify-content: center;
   margin: 1em 0;
-  padding: 0;
+  padding: 4rem 2rem;
 }
 
 .social-list__item {
@@ -477,7 +477,6 @@ i {
   font-size: var(--fs-h3);
   color: var(--clr-medium);
   font-size: 2.5rem;
-  align-items: flex-start;
 }
 
 .main__site {
@@ -624,6 +623,10 @@ i {
     text-align: center;
     font-size: 18px;
     line-height: 1.7rem;
+  }
+
+  .social-list {
+    padding: 0;
   }
 }
 
