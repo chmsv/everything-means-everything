@@ -12,7 +12,7 @@ function main() {
     alpha: true,
   })
 
-  const fov = 40
+  const fov = 43
   const aspect = 2
   const near = 0.3
   const far = 100
